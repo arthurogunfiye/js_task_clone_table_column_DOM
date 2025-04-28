@@ -10,7 +10,7 @@ const ths = theadRow?.querySelectorAll('th');
 if (ths?.length >= 2 && !theadRow.classList.contains('cloned-column-added')) {
   const copiedTh = ths[1].cloneNode(true);
 
-  theadRow.insertBefore(copiedTh, ths[ths.length - 1]);
+  theadRow.insertBefore(copiedTh, ths[1]);
   theadRow.classList.add('cloned-column-added');
 
   const rows = document.querySelectorAll('tbody tr');
@@ -21,7 +21,7 @@ if (ths?.length >= 2 && !theadRow.classList.contains('cloned-column-added')) {
     if (tds.length >= 2 && !row.classList.contains('cloned-column-added')) {
       const copiedTd = tds[1].cloneNode(true);
 
-      row.insertBefore(copiedTd, tds[tds.length - 1]);
+      row.insertBefore(copiedTd, tds[1]);
       row.classList.add('cloned-column-added');
     }
   });
@@ -33,6 +33,6 @@ const tfs = tfootRow?.querySelectorAll('th');
 if (tfs?.length >= 2 && !tfootRow.classList.contains('cloned-column-added')) {
   const copiedTf = tfs[1].cloneNode(true);
 
-  tfootRow.insertBefore(copiedTf, tfs[tfs.length - 1]);
+  tfootRow.insertBefore(copiedTf, tfs[1]);
   tfootRow.classList.add('cloned-column-added');
 }
